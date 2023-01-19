@@ -1,7 +1,11 @@
+# imports
+
 import sys
 import argparse
 import requests
 from bs4 import BeautifulSoup
+
+# variables
 
 RED_COLOR = "\033[1;31m"
 GREEN_COLOR = "\033[1;32m"
@@ -11,9 +15,13 @@ API_URL = "https://www.shorturl.at/shortener.php"
 API_PARAM = "u"
 # Creadit => www.shorturl.at
 
+# class
+
 class API:
     """A class for managing the API results."""
 
+    # functions
+    
     def __init__(self):
         """ __init__ """
         self.__long_url = ""
@@ -55,6 +63,8 @@ class API:
             return 1
         except:
             return -1
+        
+# main
 
 def main():
     """The main function of the program."""
